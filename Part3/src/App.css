@@ -1,0 +1,302 @@
+html,body{
+  /* background: #face9b; */
+  min-height:100%;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: radial-gradient(circle,#f3f3f3,#cfcfcf);
+
+}
+*{
+  font-family: 'Oswald', sans-serif;
+  color: rgb(110, 110, 110);
+}
+.container{
+  padding: 1%;
+  text-align: center !important;
+}
+.container h1{
+  font-weight: normal;
+  margin-bottom:2%; 
+  font-size: 40px;
+}
+hr{
+  opacity:0.5;
+  width: 70%;
+  margin: 2% auto;
+}
+.container input.field{
+  display: block;
+  width: 600px;
+  font-size: 16px;
+  margin: 10px auto !important;
+  padding: 8px 20px; 
+  border-radius:2px;
+  border: 1px solid rgb(206, 206, 206); 
+  color: rgb(80, 80, 80);
+  background: rgb(240, 240, 240);
+  position: static;
+  box-shadow: 0px 0px 20px #d6d6d6
+}
+.todos{
+  padding: 0;
+}
+.todo{
+  width: 615px;
+  border: 1px solid rgb(206, 206, 206); 
+  margin: 20px auto;
+  list-style: none;
+  padding: 10px 10px;
+  background: rgb(240, 240, 240);
+  box-shadow: 0px 0px 20px #d6d6d6
+
+}
+.container input.field:focus{
+  outline: none;
+  border: 1px solid rgb(185, 185, 185);
+}
+.container input[type=button]{
+  width:640px;
+  background: #e7e7e7;
+}
+.container input[type=button]:hover{
+  cursor: pointer;
+  background: #e0e0e0;
+}
+.checkBox{
+  margin:0px 10px;
+}
+.todo{
+  text-align: left;
+  text-align: justify;
+}
+.des{
+  display: block;
+  font-size: 14px;
+  margin-left: 38px;
+  margin-top: 5px;
+}
+.todo input.checkBox{
+  position: relative;
+  top: 10px;
+}
+.btnGrp{
+  float: right;
+  position: relative;
+  /* top: 3px; */
+}
+@media (max-width:700px){
+  .container input.field{
+      width: 450px;
+  }
+  .todo{
+      width: 465px;
+  }
+  
+  .container input[type=button]{
+      width: 490px;
+  }
+}
+@media (max-width:500px){
+  .container h1{
+      margin-bottom: 8%;
+  }
+  .todo{
+      width: 85%;
+  }
+  .container input.field{
+      width: 80%;
+      font-size: 18px;
+  }
+.container input[type=button]{
+  width:90%;
+}
+
+}
+
+
+
+
+
+/* //Animations// */
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+
+
+
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
